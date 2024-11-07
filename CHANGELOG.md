@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.8.4
+## 0.8.4 – 0.8.5
 
 - Fixed Svelte Compiler Issues
 

@@ -1,11 +1,10 @@
 //original version from https://github.com/evanw/esbuild/blob/plugins/docs/plugin-examples.md
-import { preprocess, compile, VERSION, CompileOptions, Warning } from "svelte/compiler";
+import { preprocess, compile, VERSION, CompileOptions, Warning, PreprocessorGroup } from "svelte/compiler";
 import { dirname, basename, relative } from "path";
 import { promisify } from "util";
 import { readFile, statSync } from "fs";
 import { originalPositionFor, TraceMap } from "@jridgewell/trace-mapping";
 
-import type { PreprocessorGroup } from "svelte/types/compiler/preprocess";
 import type { OnLoadResult, Plugin, PluginBuild, Location, PartialMessage } from "esbuild";
 
 interface esbuildSvelteOptions {

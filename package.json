@@ -1,7 +1,7 @@
 {
   "name": "esbuild-svelte5",
-  "version": "0.8.4",
-  "description": "esbuild plugin to resolve .svelte files",
+  "version": "0.8.5",
+  "description": "esbuild plugin to resolve .svelte files with support for Svelte 5",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EMH333/esbuild-svelte.git"
