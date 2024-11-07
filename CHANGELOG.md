@@ -1,7 +1,12 @@
 # Changelog
 
-## Unreleased
+## 0.8.4
 
+- Fixed Svelte Compiler Issues
+
+## 0.8.3
+
+- Upgraded to Svelte 5
 - Bump svelte minimum version to `4.2.1`
 - Bump esbuild minimum version to `0.17.0`
 - Bump node minimum version to 16 (lowest supported by Svelte `4.2.1`)

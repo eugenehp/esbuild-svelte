@@ -1,11 +1,10 @@
 //original version from https://github.com/evanw/esbuild/blob/plugins/docs/plugin-examples.md
-import { preprocess, compile, VERSION } from "svelte/compiler";
+import { preprocess, compile, VERSION, CompileOptions, Warning } from "svelte/compiler";
 import { dirname, basename, relative } from "path";
 import { promisify } from "util";
 import { readFile, statSync } from "fs";
 import { originalPositionFor, TraceMap } from "@jridgewell/trace-mapping";
 
-import type { CompileOptions, Warning } from "svelte/types/compiler/interfaces";
 import type { PreprocessorGroup } from "svelte/types/compiler/preprocess";
 import type { OnLoadResult, Plugin, PluginBuild, Location, PartialMessage } from "esbuild";
 
@@ -232,8 +231,7 @@ export default function sveltePlugin(options?: esbuildSvelteOptions): Plugin {
 
                     //if svelte emits css seperately, then store it in a map and import it from the js
                     if (
-                        (compilerOptions.css === false || compilerOptions.css === "external") &&
-                        css?.code
+                        compilerOptions.css === "external" && css?.code
                     ) {
                         let cssPath = args.path
                             .replace(".svelte", ".esbuild-svelte-fake-css") //TODO append instead of replace to support different svelte filters
