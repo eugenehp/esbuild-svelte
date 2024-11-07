@@ -1,6 +1,6 @@
 {
-  "name": "esbuild-svelte",
-  "version": "0.8.2",
+  "name": "esbuild-svelte5",
+  "version": "0.8.3",
   "description": "esbuild plugin to resolve .svelte files",
   "repository": {
     "type": "git",
@@ -36,15 +36,15 @@
   "license": "MIT",
   "peerDependencies": {
     "esbuild": ">=0.17.0",
-    "svelte": ">=4.2.1 <6"
+    "svelte": "^5.1.12"
   },
   "devDependencies": {
-    "@types/node": "^16.18.37",
+    "@types/node": "22.9.0",
     "esbuild": "^0.24.0",
     "prettier": "^3.3.0",
     "rewrite-imports": "^3.0.0",
-    "sass": "^1.77.0",
-    "svelte": "^4.2.11",
+    "sass": "1.80.6",
+    "svelte": "5.1.12",
     "svelte-preprocess-esbuild": "^3.0.0",
     "svelte-preprocess-sass": "^2.0.1",
     "typescript": "^5.5.2",
